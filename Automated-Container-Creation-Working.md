@@ -7,6 +7,11 @@
 
 ![image](https://github.com/expertcloudconsultant/dockerlabs/assets/69172523/00b0cc29-eb82-4c22-a7a1-bce28fc8cdbb)
 
+**Image Created in Docker**
+
+![image](https://github.com/expertcloudconsultant/dockerlabs/assets/69172523/0f35ea0d-3b1c-4c6a-b748-91cee0220f7d)
+
+
 **Step 3: Docker Container - Running**
 
 ![image](https://github.com/expertcloudconsultant/dockerlabs/assets/69172523/43c4ff4c-fb51-4842-a758-79e413ac4f3b)
