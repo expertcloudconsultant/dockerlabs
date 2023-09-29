@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MongoDB Data Display</title>
+</head>
+<body>
+    <h1>User Information</h1>
+    <div id="user-info">
+        <p><strong>Username:</strong> <span id="username"></span></p>
+        <p><strong>Email:</strong> <span id="email"></span></p>
+        <p><strong>Container ID:</strong> <span id="container-id"></span></p>
+        <p><strong>Host Port:</strong> <span id="host-port"></span></p>
+        <p><strong>Password:</strong> <span id="password"></span></p>
+        <p><strong>Port Number:</strong> <span id="port-number"></span></p>
+        <p><strong>SSH Access Pin:</strong> <span id="ssh-access-pin"></span></p>
+        <p><strong>SSH Username:</strong> <span id="ssh-username"></span></p>
+    </div>
+
+    <script>
+        // MongoDB connection settings
+        const mongoClient = new MongoClient("mongodb+srv://samueloppong:51UVyecsZ3sLCOPC@cluster0.52xfihh.mongodb.net/?retryWrites=true&w=majority", {
+            useNewUrlParser: true,
+            useUnifiedTopology: true
+        });
+
+        // Connect to MongoDB
+        mongoClient.connect((err) => {
+            if (err) {
+                console.error("Error connecting to MongoDB:", err);
+                return;
+            }
+
+            const db = mongoClient.db("container");
+            const appointmentsCollection = db.collection("instance");
+
+            // Find the document by _id or any other unique identifier
+            const query = { "_id": ObjectId("651723bcbc05d97f70b17a36") };
+
+            // Fetch the document from MongoDB
+            appointmentsCollection.findOne(query, (err, doc) => {
+                if (err) {
+                    console.error("Error fetching document from MongoDB:", err);
+                    return;
+                }
+
+                // Update the HTML content with the data
+                document.getElementById("username").textContent = doc.username;
+                document.getElementById("email").textContent = doc.email;
+                document.getElementById("container-id").textContent = doc.container_id;
+                document.getElementById("host-port").textContent = doc.host_port;
+                document.getElementById("password").textContent = doc.password;
+                document.getElementById("port-number").textContent = doc.port_number;
+                document.getElementById("ssh-access-pin").textContent = doc.ssh_access_pin;
+                document.getElementById("ssh-username").textContent = doc.ssh_username;
+            });
+        });
+    </script>
+</body>
+</html>
