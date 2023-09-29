@@ -11,6 +11,8 @@
 
 ![image](https://github.com/expertcloudconsultant/dockerlabs/assets/69172523/43c4ff4c-fb51-4842-a758-79e413ac4f3b)
 
+**SSH into the Container**
+![image](https://github.com/expertcloudconsultant/dockerlabs/assets/69172523/bc54c02d-e563-41e3-85d4-36faa3291f4e)
 
 
 
