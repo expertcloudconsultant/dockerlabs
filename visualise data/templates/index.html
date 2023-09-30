@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Display Data</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+<body>
+    <h1>Data from MongoDB Collection</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Container ID</th>
+                <th>Host Port</th>
+                <th>Password</th>
+                <th>Port Number</th>
+                <th>SSH Access Pin</th>
+                <th>SSH Username</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in entries %}
+            <tr>
+                <td>{{ entry.username }}</td>
+                <td>{{ entry.email }}</td>
+                <td>{{ entry.container_id }}</td>
+                <td>{{ entry.host_port }}</td>
+                <td>{{ entry.password }}</td>
+                <td>{{ entry.port_number }}</td>
+                <td>{{ entry.ssh_access_pin }}</td>
+                <td>{{ entry.ssh_username }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
