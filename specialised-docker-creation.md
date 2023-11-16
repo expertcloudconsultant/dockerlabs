@@ -41,6 +41,7 @@ if __name__ == "__main__":
     write_to_mongodb(username, email, lab_option)
 ```
 
+![image](https://github.com/expertcloudconsultant/dockerlabs/assets/69172523/b1149f13-cc5e-4c61-9e50-1228314f036c)
 
 
 
@@ -234,3 +235,6 @@ if __name__ == "__main__":
         time.sleep(1)  # Add a sleep time to avoid high CPU usage while polling
 
 ```
+![image](https://github.com/expertcloudconsultant/dockerlabs/assets/69172523/c477d040-3aaf-4dbc-b4b9-9f3cd2ffbe09)
+![image](https://github.com/expertcloudconsultant/dockerlabs/assets/69172523/0eab5e98-035c-4f67-8826-00d181b8e286)
+
